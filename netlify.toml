@@ -7,13 +7,13 @@
 
 [[redirects]]
   from = "/download/forge"
-  to = "/.netlify/functions/download?app=forge"
+  to = "/.netlify/functions/download-forge"
   status = 200
   force = true
 
 [[redirects]]
   from = "/download/forge-buddy"
-  to = "/.netlify/functions/download?app=forge-buddy"
+  to = "/.netlify/functions/download-forge-buddy"
   status = 200
   force = true
 

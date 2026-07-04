@@ -22,8 +22,7 @@ function response(statusCode, body) {
   }
 }
 
-exports.handler = async (event) => {
-  const app = event.queryStringParameters?.app || ''
+async function download(app) {
   const config = RELEASES[app]
   if (!config) return response(404, 'Unknown download.')
 
@@ -57,4 +56,11 @@ exports.handler = async (event) => {
     },
     body: ''
   }
+}
+
+exports.download = download
+
+exports.handler = async (event) => {
+  const app = event.queryStringParameters?.app || ''
+  return download(app)
 }
