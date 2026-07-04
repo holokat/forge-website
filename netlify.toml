@@ -2,6 +2,21 @@
   publish = "."
   command = ""
 
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/download/forge"
+  to = "/.netlify/functions/download?app=forge"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/download/forge-buddy"
+  to = "/.netlify/functions/download?app=forge-buddy"
+  status = 200
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
